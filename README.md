@@ -5,24 +5,21 @@ An automation testing framework for web appplucation using Cypress
 .
 ├── cypress
 │   ├── fixtures
-│   │   ├── login.json
+│   │   ├── answer.json
+│   │   ├── locator.json
+│   │   ├── messages.json
+│   │   ├── testdata.json
 │   │   └── ...
 │   ├── integration
-│   │   ├── homepage.spec.js
-│   │   ├── login.spec.js
+│   │   ├── chatBox.spec.js
 │   │   └── ...
-│   ├── page-objects
-│   │   ├── BasePage.js
-│   │   ├── HomePage.js
-│   │   ├── LoginPage.js
+│   ├── pages
+│   │   ├── ChatBoxPage.js
 │   │   └── ...
 │   ├── plugins
 │   │   ├── index.js
 │   │   └── ...
 │   └── support
-│      ├── utils
-│      │   ├── Utils.js
-│      │   └── ...
 │      ├── commands.js
 │      ├── index.js
 │      └── ...
@@ -36,7 +33,7 @@ An automation testing framework for web appplucation using Cypress
 ### Installation
 1. Clone the repo
 ```
-git clone https://github.com/wizeline/Cypress-Framework.git
+git clone https://github.com/trangnguyen1010/CypressAutomation.git
 ```
 2. Install NPM packages
 ```
