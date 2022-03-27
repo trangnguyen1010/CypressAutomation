@@ -126,42 +126,40 @@ class ChatBoxPage {
         cy.fixture("messages").then(function (message) {
           this.message = message;
           checkMessage(locator.locatorMess, message.identificationMess);
+
+          //select identify
+          selectOption(locator.optionList, locator.locatorId, message.option);
+
+          //verify the identify on screen
+          checkSingleMess(message.option);
+
+          //check select language option
+
+          checkSingleMess(message.languageCheck);
+
+          //select the identity option
+          selectOption(locator.optionList, locator.locatorId, message.option);
+
+          //verify the selected language
+          checkSingleMess(message.option);
+          //select age
+          selectOption(locator.optionList, locator.locatorId, message.ageGroup);
+          //verify the age group
+          checkSingleMess(message.ageGroup);
+          //verify the submit message before submitting
+          checkSingleMess(message.submitMess);
+
+          //click on Submit btn
+          selectOption(locator.optionList, locator.locatorId, message.submit);
+          checkSingleMess(message.submit);
+
+          //verify the sucessful message is display once user click on Submit butotn
+          checkMessage(locator.locatorMess, message.successfulMess);
+          cy.get("button").contains(message.submitRating).click();
+
+          //the last message
+          checkSingleMess(message.finalMessage);
         });
-      });
-
-      //select identify
-      selectOption(locator.optionList, locator.locatorId, "Yes");
-
-      //verify the identify on screen
-      checkSingleMess("Yes");
-
-      //check select language option
-      cy.fixture("messages").then(function (message) {
-        this.message = message;
-        checkSingleMess(message.languageCheck);
-
-        //select the identity option
-        selectOption(locator.optionList, locator.locatorId, message.option);
-
-        //verify the selected language
-        checkSingleMess(message.option);
-        //select age
-        selectOption(locator.optionList, locator.locatorId, message.ageGroup);
-        //verify the age group
-        checkSingleMess(message.ageGroup);
-        //verify the submit message before submitting
-        checkSingleMess(message.submitMess);
-
-        //click on Submit btn
-        selectOption(locator.optionList, locator.locatorId, message.submit);
-        checkSingleMess(message.submit);
-
-        //verify the sucessful message is display once user click on Submit butotn
-        checkMessage(locator.locatorMess, message.successfulMess);
-        cy.get("button").contains(message.submitRating).click();
-
-        //the last message
-        checkSingleMess(message.finalMessage);
       });
     });
   }
