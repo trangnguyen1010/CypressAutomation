@@ -1,0 +1,8 @@
+{
+  "name": "test name",
+  "email": "example@gmail.com",
+  "selectedCountry": "Australia",
+  "phoneNum": "481123456",
+  "address": "Perth",
+  "addressDetail": "Perth WA, Australia"
+}

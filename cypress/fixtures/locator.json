@@ -1,0 +1,12 @@
+{
+  "locatorMess": ".dialog-box-content",
+  "locatorInput": ".text-input-editor",
+  "locatorDropdownInput": ".ant-select-selector",
+  "locatorDropdownList": ".ant-select-item-option-content",
+  "optionList": ".option-list-box",
+  "errPopMess": ".ant-modal-content",
+  "editorBox": ".editor-box",
+  "locatorAddress": ".ant-popover-content",
+  "locatorId": "#1",
+  "locatorVideo": "#widget2"
+}
